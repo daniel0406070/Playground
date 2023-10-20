@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-static int global= 5000;
-extern int getglobal();
+char *tok= " ,.?!";
 
 int main(){
-    printf("전역 변수 : global = %d\n",getglobal());
-    printf("정적 전역변수 : global = %d\n",global);
-    
-    global++;
-    printf("전역 변수 : global = %d\n",getglobal());
-    printf("정적 전역변수 : global = %d\n",global);
-
+    char line[81];
+    char *ptr;
+    //gets(line);
+    gets(line);
+    ptr=line;
+    while (*ptr){
+        putchar(*ptr++);
+    }
+    printf("\n");
 }
